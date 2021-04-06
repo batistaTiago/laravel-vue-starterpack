@@ -34,4 +34,15 @@ class TestController extends Controller
 
         return Inertia::render('About');
     }
+
+    public function register(Request $request)
+
+    {
+        return Inertia::render('Register');
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
 }

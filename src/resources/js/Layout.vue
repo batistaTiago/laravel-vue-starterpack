@@ -4,7 +4,7 @@
       <!-- Routes definition, for using inertia like a SPA -->
       <inertia-link href="/">Home</inertia-link>
       <inertia-link href="/about">Sobre</inertia-link>
-    
+      <inertia-link href="/register">Register</inertia-link>
     <div>
         <slot />
     </div>

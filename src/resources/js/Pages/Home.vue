@@ -2,7 +2,6 @@
 
 <layout>
     <div>
-
         Ola {{user}} vuejs
     </div>    
 </layout>
