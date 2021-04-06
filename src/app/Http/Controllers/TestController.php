@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
@@ -45,11 +46,21 @@ class TestController extends Controller
     public function store(Request $request)
     {
 
-
-        // dd($request->all());
-
         
+        // try{
 
-        return Redirect::route('about');
+            $request->validate([
+                'name' => ['required'],
+                'email' => ['required'],
+                'password' => ['required'],
+
+            ]);
+            // throw new Exception('erro inesperado');
+            return Redirect::route('about');
+
+        // }catch(Exception $e){
+        //     return Redirect::route('about');
+
+        // }
     }
 }

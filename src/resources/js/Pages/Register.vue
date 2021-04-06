@@ -1,7 +1,10 @@
 <template>
   <layout>
     <div>
+        <div v-for="(erro, index) in errors" :key="index" style="border: 1px solid red;">
 
+            {{erro}}
+        </div>
         Register
 
         <form @submit.prevent="handleForm">
@@ -25,6 +28,7 @@ export default {
         components: { Layout },
 
         props: {
+            errors: Object,
         },
 
         data: () => {

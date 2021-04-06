@@ -3064,8 +3064,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    errors: Object
+  },
   components: {
     Layout: _Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
@@ -3135,12 +3141,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     Layout: _Layout__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
-  props: {},
+  props: {
+    errors: Object
+  },
   data: function data() {
     return {
       form: {
@@ -6592,7 +6603,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("layout", [_c("div", [_vm._v("\n\n        About\n    ")])])
+  return _c(
+    "layout",
+    [
+      _vm._l(_vm.errors, function(erro, index) {
+        return _c(
+          "div",
+          { key: index, staticStyle: { border: "1px solid red" } },
+          [_vm._v("\n\n        " + _vm._s(erro) + "\n    ")]
+        )
+      }),
+      _vm._v(" "),
+      _c("div", [_vm._v("\n\n        About\n    ")])
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -6643,86 +6668,97 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("layout", [
-    _c("div", [
-      _vm._v("\n\n        Register\n\n        "),
-      _c(
-        "form",
-        {
-          on: {
-            submit: function($event) {
-              $event.preventDefault()
-              return _vm.handleForm($event)
-            }
-          }
-        },
-        [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.name,
-                expression: "form.name"
-              }
-            ],
-            attrs: { type: "text", placeholder: "nome" },
-            domProps: { value: _vm.form.name },
+    _c(
+      "div",
+      [
+        _vm._l(_vm.errors, function(erro, index) {
+          return _c(
+            "div",
+            { key: index, staticStyle: { border: "1px solid red" } },
+            [_vm._v("\n\n            " + _vm._s(erro) + "\n        ")]
+          )
+        }),
+        _vm._v("\n        Register\n\n        "),
+        _c(
+          "form",
+          {
             on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.form, "name", $event.target.value)
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.handleForm($event)
               }
             }
-          }),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.email,
-                expression: "form.email"
-              }
-            ],
-            attrs: { type: "email", placeholder: "email" },
-            domProps: { value: _vm.form.email },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+          },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.name,
+                  expression: "form.name"
                 }
-                _vm.$set(_vm.form, "email", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.form.password,
-                expression: "form.password"
-              }
-            ],
-            attrs: { type: "password", placeholder: "password" },
-            domProps: { value: _vm.form.password },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+              ],
+              attrs: { type: "text", placeholder: "nome" },
+              domProps: { value: _vm.form.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "name", $event.target.value)
                 }
-                _vm.$set(_vm.form, "password", $event.target.value)
               }
-            }
-          }),
-          _vm._v(" "),
-          _c("button", { attrs: { type: "submit" } }, [_vm._v("Cadastrar")])
-        ]
-      )
-    ])
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.email,
+                  expression: "form.email"
+                }
+              ],
+              attrs: { type: "email", placeholder: "email" },
+              domProps: { value: _vm.form.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "email", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.form.password,
+                  expression: "form.password"
+                }
+              ],
+              attrs: { type: "password", placeholder: "password" },
+              domProps: { value: _vm.form.password },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.form, "password", $event.target.value)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("button", { attrs: { type: "submit" } }, [_vm._v("Cadastrar")])
+          ]
+        )
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = []
