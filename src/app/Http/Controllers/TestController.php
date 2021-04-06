@@ -11,7 +11,8 @@ class TestController extends Controller
     public function list(Request $request)
     {
 
-    
+        
+        $user = 'Eumesmo';
         $event = [
             'id' => 1,
             'title' => 'testeVuJs',
@@ -22,12 +23,15 @@ class TestController extends Controller
         $event = collect($event);
     
         return Inertia::render('Home', [
-            'event' => $event->only(
-                'id',
-                'title',
-                'start_date',
-                'description'
-            ),
+            'user' => $user,
+            'event' => $event
         ]);
+    }
+
+
+    public function about(Request $request)
+    {
+
+        return Inertia::render('About');
     }
 }

@@ -1,24 +1,21 @@
 <template>
+    <layout>
 
-<layout>
-    <div>
+        <div>
 
-        Ola {{user}} vuejs
-    </div>    
-</layout>
-
+            About
+        </div>
+    </layout>
 
 </template>
 
 <script type="text/javascript">
+
+
     import Layout from '../Layout';
 
     export default {
         components: { Layout },
-
-        props: {
-            user : String,
-        }
     }
 
 </script>

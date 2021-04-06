@@ -15,3 +15,5 @@ use Inertia\Inertia;
 
 
 Route::get('/' , 'TestController@list');
+
+Route::get('/about' , 'TestController@about');
