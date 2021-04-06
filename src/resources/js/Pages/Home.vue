@@ -4,6 +4,10 @@
     <div>
         Ola {{user}} vuejs
     </div>    
+
+    <div v-if="$page.props.flash" style="border: 2px solid green;">
+        {{$page.props.flash}}
+    </div>
 </layout>
 
 

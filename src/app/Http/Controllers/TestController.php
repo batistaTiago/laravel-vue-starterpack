@@ -47,7 +47,6 @@ class TestController extends Controller
     {
 
         
-        // try{
 
             $request->validate([
                 'name' => ['required'],
@@ -56,11 +55,8 @@ class TestController extends Controller
 
             ]);
             // throw new Exception('erro inesperado');
-            return Redirect::route('about');
+            return Redirect::route('home')->with('success', 'Usuario criado com sucesso');
 
-        // }catch(Exception $e){
-        //     return Redirect::route('about');
-
-        // }
+    
     }
 }

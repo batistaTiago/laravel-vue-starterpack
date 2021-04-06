@@ -14,7 +14,7 @@
 use Inertia\Inertia;
 
 
-Route::get('/' , 'TestController@list');
+Route::get('/' , 'TestController@list')->name('home');
 
 Route::get('/about' , 'TestController@about')->name('about');
 

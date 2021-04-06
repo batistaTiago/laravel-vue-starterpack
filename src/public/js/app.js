@@ -3100,6 +3100,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -6642,7 +6646,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("layout", [
-    _c("div", [_vm._v("\n        Ola " + _vm._s(_vm.user) + " vuejs\n    ")])
+    _c("div", [_vm._v("\n        Ola " + _vm._s(_vm.user) + " vuejs\n    ")]),
+    _vm._v(" "),
+    _vm.$page.props.flash
+      ? _c("div", { staticStyle: { border: "2px solid green" } }, [
+          _vm._v("\n        " + _vm._s(_vm.$page.props.flash) + "\n    ")
+        ])
+      : _vm._e()
   ])
 }
 var staticRenderFns = []
