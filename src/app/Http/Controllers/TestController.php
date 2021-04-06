@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
 class TestController extends Controller
@@ -43,6 +44,12 @@ class TestController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+
+
+        // dd($request->all());
+
+        
+
+        return Redirect::route('about');
     }
 }
