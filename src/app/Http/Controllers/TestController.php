@@ -21,7 +21,7 @@ class TestController extends Controller
 
         $event = collect($event);
     
-        return Inertia::render('Event/Show', [
+        return Inertia::render('Home', [
             'event' => $event->only(
                 'id',
                 'title',

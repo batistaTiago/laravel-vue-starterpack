@@ -11,4 +11,7 @@
 |
 */
 
-Inertia::get('/' , 'TesteController@list');
+use Inertia\Inertia;
+
+
+Route::get('/' , 'TestController@list');
