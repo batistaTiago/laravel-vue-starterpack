@@ -11,6 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use Inertia\Inertia;
+
+
+Route::get('/' , 'TestController@list')->name('home');
+
+Route::get('/about' , 'TestController@about')->name('about');
+
+Route::get('/register' , 'TestController@register');
+
+Route::post('/register' , 'TestController@store');
