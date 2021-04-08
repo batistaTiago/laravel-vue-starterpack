@@ -21,10 +21,12 @@
         "sass": "^1.20.1",
         "sass-loader": "7.*",
         "vue": "^2.5.17",
-        "vue-template-compiler": "^2.6.10"
+        "vue-template-compiler": "^2.6.10",
+        "vuetifyjs-mix-extension": "0.0.20"
     },
     "dependencies": {
         "@inertiajs/inertia": "^0.8.6",
-        "@inertiajs/inertia-vue": "^0.5.9"
+        "@inertiajs/inertia-vue": "^0.5.9",
+        "vuetify": "^2.4.9"
     }
 }

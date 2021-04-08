@@ -6,7 +6,11 @@
       <inertia-link href="/about">Sobre</inertia-link>
       <inertia-link href="/register">Register</inertia-link>
     <div>
-        <slot />
+      <v-app>
+        <v-content>
+          <slot />
+        </v-content>
+      </v-app>
     </div>
 
 

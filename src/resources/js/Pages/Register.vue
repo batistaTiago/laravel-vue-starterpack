@@ -7,6 +7,38 @@
         </div>
         Register
 
+        <v-app>
+            <v-content>
+            <v-system-bar
+            color="secondary"
+  height="30"
+>
+teste
+</v-system-bar>
+<v-btn
+      class="mx-2"
+      fab
+      dark
+      small
+      color="pink"
+    >
+      <v-icon dark>
+        mdi-heart
+      </v-icon>
+    </v-btn>
+
+            </v-content>
+            <v-tabs>
+    <v-tab>Item One</v-tab>
+    <v-tab>Item Two</v-tab>
+    <v-tab>Item Three</v-tab>
+  </v-tabs>
+  <v-alert
+  type="success"
+>teste</v-alert>
+
+        </v-app>
+
         <form @submit.prevent="handleForm">
 
             <input type="text" placeholder="nome" v-model="form.name" />
